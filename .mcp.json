@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "heyamos": {
+      "type": "http",
+      "url": "https://engine.heyamos.com/api/v1/mcp-with-oauth"
+    }
+  }
+}

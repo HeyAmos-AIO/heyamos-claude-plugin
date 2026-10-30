@@ -1,0 +1,13 @@
+{
+  "name": "heyamos",
+  "displayName": "HeyAmos",
+  "version": "1.0.0",
+  "description": "Analyze how your brand shows up in AI answers (ChatGPT, Gemini, Claude, Perplexity, Copilot) using your HeyAmos workspace: visibility, citations, sentiment, competitor gaps, weekly content learnings, and prompt set planning.",
+  "author": {
+    "name": "HeyAmos",
+    "url": "https://heyamos.com"
+  },
+  "homepage": "https://heyamos.com",
+  "license": "MIT",
+  "keywords": ["geo", "aeo", "ai-search", "brand-visibility", "llm-tracking", "citations", "seo"]
+}
