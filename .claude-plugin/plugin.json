@@ -8,6 +8,8 @@
     "url": "https://heyamos.com"
   },
   "homepage": "https://heyamos.com",
+  "privacyPolicyUrl": "https://heyamos.com/privacy-policy",
   "license": "MIT",
+  "icon": "assets/icon.png",
   "keywords": ["geo", "aeo", "ai-search", "brand-visibility", "llm-tracking", "citations", "seo"]
 }

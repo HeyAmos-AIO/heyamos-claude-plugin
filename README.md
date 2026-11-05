@@ -38,9 +38,9 @@ You need a HeyAmos account with at least one workspace. Some tools (Google Analy
 - **Reads** your HeyAmos workspace data through the HeyAmos MCP server: brand profile, prompts and their metrics, AI answer extracts, citations, insights, suggested actions, alerts, and connected analytics integrations.
 - **Changes** data only through the prompt tools (add or delete prompts, manage prompt topics). The skills always show you the exact changes and ask before calling them. Every other tool is read-only.
 - **Sends** tool requests only to `engine.heyamos.com`, authenticated with your HeyAmos OAuth sign-in. The skills may also ask Claude to open your website, competitor pages and other public web pages to check facts and page formats, using Claude's own web tools.
-- The plugin itself contains only Markdown instructions and configuration. It runs no local code, scripts or hooks, and stores nothing.
+- The plugin itself contains only Markdown instructions, configuration and an icon image. It runs no local code, scripts or hooks, and stores nothing.
 
-Data handling by HeyAmos is covered by the HeyAmos terms and privacy policy at [heyamos.com](https://heyamos.com).
+Data handling by HeyAmos is covered by the [HeyAmos privacy policy](https://heyamos.com/privacy-policy).
 
 ## Support
 
