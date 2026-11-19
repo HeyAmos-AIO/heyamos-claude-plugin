@@ -1,7 +1,7 @@
 {
   "name": "heyamos",
   "displayName": "HeyAmos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analyze how your brand shows up in AI answers (ChatGPT, Gemini, Claude, Perplexity, Copilot) using your HeyAmos workspace: visibility, citations, sentiment, competitor gaps, weekly content learnings, and prompt set planning.",
   "author": {
     "name": "HeyAmos",

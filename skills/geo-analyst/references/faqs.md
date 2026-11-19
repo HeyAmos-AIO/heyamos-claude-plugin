@@ -17,7 +17,7 @@ HeyAmos records the actual citations behind every AI answer. It shows which page
 ## What can we do? Can we influence it?
 
 - **Your own content.** If AI has nothing to cite on a topic, you're invisible on it. Dedicated, well-structured pages for topics where you appear in zero answers give AI something to use. This is usually the fastest lever.
-- **Earned media.** Placements in the outlets AI already cites for your category. HeyAmos ranks outlets by how often AI cites them for your prompts (`earned_media_top_sources_to_pitch`), so PR spend targets outlets that move AI answers. The HeyAmos platform also lets you buy placements in the outlets AI reads for your industry.
+- **Earned media.** Placements in the outlets AI already cites for your category. HeyAmos ranks outlets by how often AI cites them for your prompts (`get_press_citing_domains`), so PR spend targets outlets that move AI answers. The HeyAmos platform also lets you buy placements in the outlets AI reads for your industry.
 
 ## Help me add new prompts
 

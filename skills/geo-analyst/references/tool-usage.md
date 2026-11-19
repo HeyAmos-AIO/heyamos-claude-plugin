@@ -1,6 +1,6 @@
 # HeyAmos MCP tool usage notes
 
-How to format inputs for the `heyamos` MCP tools. For the server's own, always-current playbook, call `how_to_use_heyamos_and_tools`.
+How to format inputs for the `heyamos` MCP tools.
 
 ## Workspace
 
@@ -39,7 +39,7 @@ The connection is scoped to the workspace the user signed in to. `workspaceSlug`
 
 ## Google Ads
 
-- `get_gads_*` tools appear only when Google Ads is connected for the workspace. They are analytics only (overview, campaigns, keywords, search terms, device, trends). Never try to create, edit or pause ads.
+- `get_google_ads_*` tools appear only when Google Ads is connected for the workspace. They are analytics only (overview, campaigns, keywords, search terms, device, trends). Never try to create, edit or pause ads.
 - `customerId` is ignored; the workspace's default account is used.
 - Dates default to roughly the last 28 days.
 - If the tools are missing, tell the user to connect Google Ads in Workspace Settings. Never invent paid-search numbers.
@@ -56,8 +56,8 @@ The connection is scoped to the workspace the user signed in to. `workspaceSlug`
 
 ## Writes
 
-Only these tools change data: `add_prompt`, `bulk_add_prompt`, `delete_prompt`, `add_prompt_topic`, `update_prompt_topic`, `delete_prompt_topic`. Show the user exactly what will change and get a clear yes first. `bulk_add_prompt` takes `prompts`, an array of objects with at least `text`, `llmProviders` and `frequency`; duplicates by text are skipped.
+Only these tools change data: `add_prompt`, `add_prompts`, `delete_prompt`, `add_prompt_topic`, `update_prompt_topic`, `delete_prompt_topic`. Show the user exactly what will change and get a clear yes first. `add_prompts` takes `prompts`, an array of objects with at least `text`, `llmProviders` and `frequency`; duplicates by text are skipped.
 
-## `check_external_web_page_mention`
+## `fetch_external_page_brand_mention`
 
 It analyzes one external page live and can be slow. If you use it, make it the last call in a run. If it fails, read the page on the web instead.

@@ -76,13 +76,13 @@ Base every recommendation on a specific finding. No generic advice.
 - A sitemap that updates automatically
 - AI crawlers allowed in robots.txt, and robots.txt configured correctly
 - The site indexed on both Google and Bing
-- Google Search Console and Bing Webmaster Tools set up (`get_gsc_status`, `get_bing_status`)
+- Google Search Console and Bing Webmaster Tools set up (`get_google_search_console_status`, `get_bing_webmaster_status`)
 
 ## What moved the needle
 
 The user may ask "what moved the needle" or "what impact have our actions had".
 
-1. Read the last 4 weeks of `get_suggested_actions`, drafted content (`get_content_agent_draft_lists`) and top external citations.
+1. Read the last 4 weeks of `get_suggested_actions`, drafted content (`get_content_drafts`) and top external citations.
 2. Check the top 50 external citations for brand mentions. For those that mention the brand, find which prompts they affect (`get_prompts_using_citation`).
 3. Cross-check against visibility changes, in total and per prompt.
 
@@ -90,7 +90,7 @@ Look for clear patterns of action → outcome, and how long each took.
 
 ## Mention analysis
 
-When the user asks how the brand is mentioned (sentiment, how it is presented, perception), go through the actual answers with `query_mentions` and the `get_mention_*` tools. Find the patterns:
+When the user asks how the brand is mentioned (sentiment, how it is presented, perception), go through the actual answers with `get_mention_extracts` and the `get_mention_*` tools. Find the patterns:
 
 - How answers are usually structured
 - How the brand is perceived
@@ -107,4 +107,4 @@ Whether the brand is visible matters less here.
 - Put the sources and citations analysis first in importance.
 - Keep answers short. Offer the next step instead of covering every angle at once.
 - The connection covers only this workspace. If asked about other accounts, say you don't have access to that data, and don't offer anonymized data.
-- HeyAmos tools are read-only except prompt and topic management (`add_prompt`, `bulk_add_prompt`, `delete_prompt`, `*_prompt_topic`). Only call those after the user explicitly approves the change.
+- HeyAmos tools are read-only except prompt and topic management (`add_prompt`, `add_prompts`, `delete_prompt`, `*_prompt_topic`). Only call those after the user explicitly approves the change.

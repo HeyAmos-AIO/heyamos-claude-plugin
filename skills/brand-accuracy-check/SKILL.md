@@ -26,7 +26,7 @@ Read the latest `get_what_changed`, `get_suggested_actions` and `get_alerts`. No
 ## Step 3: Pull real answers
 
 1. Use `get_all_prompts_with_metrics` to note each prompt's sentiment and which prompts name the brand.
-2. Call `query_mentions` with `isIncluded` true, once per tracked AI tool (filter with `llm`, since results don't say which tool). Then again with `sentiment` set to `negative`, and to `mixed`. Page through until you have the real extracts.
+2. Call `get_mention_extracts` with `isIncluded` true, once per tracked AI tool (filter with `llm`, since results don't say which tool). Then again with `sentiment` set to `negative`, and to `mixed`. Page through until you have the real extracts.
 3. If no prompt names the brand, that's fine: read how AI describes it when it comes up on its own.
 4. Separate extracts that describe the brand from ones that only cite its pages.
 
@@ -41,12 +41,12 @@ Call `get_mention_negative_themes` and read the negative and mixed extracts. Say
 ## Step 6: Perception
 
 - Call `get_mention_brand_values` and `get_mention_choice_factors`. What is the brand known for, and why does AI pick it or pass?
-- Note which brands AI lists next to it, and how it describes the brand against them (`get_mention_competing_themes` helps).
+- Note which brands AI lists next to it, and how it describes the brand against them (`get_competitor_visibility` helps).
 - Note differences between AI tools in tone and facts.
 
 ## Step 7: Sources
 
-For each wrong or negative statement, find the pages behind it: `get_citations` filtered by prompt and AI tool (use `search` for your domain), or `query_mentions` with `citationUrl`. Open those pages on the web. Say whether each is the brand's, a third party's or a competitor's, and whether it's out of date.
+For each wrong or negative statement, find the pages behind it: `get_citations` filtered by prompt and AI tool (use `search` for your domain), or `get_mention_extracts` with `citationUrl`. Open those pages on the web. Say whether each is the brand's, a third party's or a competitor's, and whether it's out of date.
 
 ## Step 8: Write it up
 
@@ -58,7 +58,7 @@ The report (about 500 words):
 - **Sentiment:** the overall lean, the negative themes with a quote each, and whether each is fair.
 - **Perception:** what you're known for, why AI picks you or doesn't, who you're listed with, differences between AI tools.
 - **What to do next:** 2–4 plain fixes, such as the page to correct or add, or the source to address.
-- **Not checked:** what you couldn't check. For Search Console and GA4 (`get_gsc_status`, `get_ga4_status`), say only connected or not.
+- **Not checked:** what you couldn't check. For Search Console and GA4 (`get_google_search_console_status`, `get_google_analytics_status`), say only connected or not.
 
 ## Ground rules
 
@@ -67,4 +67,4 @@ The report (about 500 words):
 - Most answers are neutral. Say so when it's true. A sentiment number is never a finding without a quote.
 - Write plainly, to "you". Say ChatGPT, not OpenAI.
 - If a page won't open, say so.
-- If you use `check_external_web_page_mention`, make it your last call. If it fails, read the page on the web instead.
+- If you use `fetch_external_page_brand_mention`, make it your last call. If it fails, read the page on the web instead.

@@ -31,8 +31,8 @@ Call `get_brand_profile` so you know the brand, its tracked competitors, markets
 - Do the same for the main competitors.
 - Read what HeyAmos already has:
   - `get_all_prompts_with_metrics` — the current prompts, so you don't duplicate them.
-  - `get_high_volume_missing_prompts` and `get_prompt_suggestions` — gaps HeyAmos has found.
-  - `get_ai_search_search_terms`, `get_ai_search_discovery_search_terms` and `ai_search_topic_clusters` — real demand signals for the category.
+  - `get_low_visibility_prompts` and `get_prompt_suggestions` — gaps HeyAmos has found.
+  - `get_ai_answer_search_terms`, `get_generic_research_search_terms` and `get_topic_cluster_metrics` — real demand signals for the category.
   - `convert_keywords_to_prompts` — turn key topics into natural prompts.
 
 ## Step 3: Generate prompts
@@ -60,7 +60,7 @@ Weight toward the focus from question 2:
 1. Ask for approval or tweaks. Revise until the user approves the set.
 2. Confirm the settings before adding: which AI tools (`llmProviders`, default to the tracked providers in the brand profile) and `frequency` (default `weekly`; never `hourly` unless asked, since it uses many credits). Mention that new prompts use simulation credits.
 3. If the user wants topics, create missing ones with `add_prompt_topic`.
-4. Add the approved prompts with `bulk_add_prompt` (each item: `text`, `llmProviders`, `frequency`, and `priority` / `category` where set). Duplicates by text are skipped.
+4. Add the approved prompts with `add_prompts` (each item: `text`, `llmProviders`, `frequency`, and `priority` / `category` where set). Duplicates by text are skipped.
 5. Report how many were added and how many were skipped as duplicates. Assign topics with `update_prompt_topic` if needed.
 
 Never add, delete or change prompts without the user's explicit approval of the final list.

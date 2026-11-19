@@ -30,12 +30,12 @@ Read the last few weeks of `get_what_changed`, `get_suggested_actions` and `get_
 
 Find actions suggested more than once in recent weeks. For the top few:
 
-- Check whether each went live: open the brand's site, its sitemap, or use `get_owned_domain_pages_list`. For external actions, open the third-party page and look for the brand.
+- Check whether each went live: open the brand's site, its sitemap, or use `get_owned_website_pages`. For external actions, open the third-party page and look for the brand.
 - If it's live, compare the page's citations and its target prompt's visibility with before.
 
 ## Step 4: What AI picked up, and why
 
-- **Picked up vs not.** List the brand's pages published or discovered in the last 4 weeks (`get_owned_domain_pages_list` with `startDate`, plus the sitemap). Check each against the brand's citations for the latest answer day (`get_citations` with `type` set to `owned`). Split them into picked up and not picked up.
+- **Picked up vs not.** List the brand's pages published or discovered in the last 4 weeks (`get_owned_website_pages` with `startDate`, plus the sitemap). Check each against the brand's citations for the latest answer day (`get_citations` with `type` set to `owned`). Split them into picked up and not picked up.
 - **Open a few of each on the web.** For each, note: title, meta description, headings, whether it opens with a quick answer, lists or tables, an FAQ, schema, published and updated dates, and length. Note what the picked-up pages share that the others lack.
 - **Across weeks.** Compare the brand's cited pages over the last 4 answer days. Which carry you every week, which are new, and which faded? Check whether a faded page moved or broke.
 - **Outside pages.** Open competitor or third-party pages that gained citations. Search the web for new coverage from the last month. Check whether last week's "learned" points still hold.
@@ -43,7 +43,7 @@ Find actions suggested more than once in recent weeks. For the top few:
 
 ## Step 5: Which prompts deserve the effort
 
-Get each prompt's search volume from `get_all_prompts_with_metrics` (`get_top_prompts_by_volume` shows the top 5). Compare each prompt's visibility over recent weeks and give a one-line call:
+Get each prompt's search volume from `get_all_prompts_with_metrics` (`get_prompts_by_search_volume` shows the top 5). Compare each prompt's visibility over recent weeks and give a one-line call:
 
 - **Keep working it:** it has real volume and you're absent, weak or rising.
 - **Swap it:** it has little or no volume and hasn't moved, or you already win it steadily.
@@ -61,7 +61,7 @@ List high-volume prompts first. Swaps are suggestions only; don't delete anythin
 - **Prompts:** keep or swap per prompt, with its volume.
 - **What changed in the guide:** rules added, kept or dropped.
 - **What to do next:** 2–4 plain steps.
-- **Not checked:** what you couldn't check. For Search Console and GA4 (`get_gsc_status`, `get_ga4_status`), say only connected or not.
+- **Not checked:** what you couldn't check. For Search Console and GA4 (`get_google_search_console_status`, `get_google_analytics_status`), say only connected or not.
 
 **`content-writer-guide.md`** is a short rule list for the brand's writing agent:
 
@@ -78,4 +78,4 @@ Write the guide to a file if you can write files; otherwise put it in your reply
 - Say "pages with X were cited more", not "X causes citations".
 - Write plainly, to "you". Don't copy tool headings.
 - If a page won't open, say so.
-- If you use `check_external_web_page_mention`, make it your last call. If it fails, read the page on the web instead.
+- If you use `fetch_external_page_brand_mention`, make it your last call. If it fails, read the page on the web instead.
